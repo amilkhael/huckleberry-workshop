@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-family-primary), var(--font-family-secondary);
 }
 
 html,
@@ -10,3 +10,115 @@ body {
 }
 
 /* Add styles here! */
+
+:root {
+  /* Core units
+     ================================================================= */
+  --base-unit: 0.25rem;
+  --base-half-unit: calc(var(--base-unit) / 2);
+  /* Typography
+    ================================================================= */
+  /* Fonts */
+  --font-family-primary: "Lato";
+  --font-family-secondary: sans-serif;
+  --font-base-unit: var(--base-unit);
+  /* Font sizes - 4x4 grid */
+  --font-size-12: calc(var(--font-base-unit) * 3);
+  --font-size-16: calc(var(--font-base-unit) * 4);
+  --font-size-20: calc(var(--font-base-unit) * 5);
+  --font-size-24: calc(var(--font-base-unit) * 6);
+  --font-size-32: calc(var(--font-base-unit) * 8);
+  --font-size-40: calc(var(--font-base-unit) * 10);
+  --font-size-48: calc(var(--font-base-unit) * 12);
+  --font-size-64: calc(var(--font-base-unit) * 16);
+  /* Space
+     ================================================================= */
+  --space-base-unit: var(--base-unit);
+  /* Margin, Padding - 8x8 grid */
+  --space-8: calc(var(--space-base-unit) * 2);
+  --space-16: calc(var(--space-base-unit) * 4);
+  --space-24: calc(var(--space-base-unit) * 6);
+  --space-32: calc(var(--space-base-unit) * 8);
+  --space-40: calc(var(--space-base-unit) * 10);
+  --space-48: calc(var(--space-base-unit) * 12);
+  --space-64: calc(var(--space-base-unit) * 16);
+  --space-72: calc(var(--space-base-unit) * 18);
+  --space-96: calc(var(--space-base-unit) * 24);
+  /* Color
+     ================================================================= */
+  --color-primary-green: hsl(160deg, 100%, 30%);
+  --color-secondary-gold-lighter: hsl(45deg, 100%, 50%);
+  --color-secondary-gold-darker: hsl(45deg, 100%, 40%);
+  --color-gray-1: hsl(0deg, 0%, 100%);
+  --color-gray-2: hsl(0deg, 0%, 60%);
+  --color-gray-3: hsl(0deg, 0%, 40%);
+  --color-gray-4: hsl(0deg, 0%, 30%);
+  --color-gray-5: hsl(0deg, 0%, 10%);
+  --color-gray-10: #hsl(0deg, 0%, 0%);
+}
+
+header {
+  padding-top: var(--space-96);
+  padding-bottom: var(--space-64);
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-chunk {
+  max-width: 23em;
+  font-size: var(--font-size-20);
+  line-height: 30px;
+  padding: 0 var(--space-24);
+}
+
+.intro-chunk strong {
+  color: var(--color-primary-green);
+  font-weight: 800;
+}
+
+.title {
+  margin-bottom: var(--space-48);
+  font-size: var(--font-size-32);
+  font-weight: 800;
+  line-height: 38.4px;
+}
+
+main {
+  background-color: var(--color-gray-3);
+  padding-block-start: var(--space-72);
+  padding-block-end: var(--space-72);
+}
+
+.card {
+  background-color: var(--color-gray-1);
+  padding: var(--space-8) var(--space-24) var(--space-24) var(--space-24);
+  font-weight: 500;
+  font-size: var(--font-size-20);
+  line-height: 30px;
+}
+
+.card p {
+  margin: 0;
+  margin-bottom: var(--space-16);
+}
+
+.card p:last-of-type {
+  margin-bottom: 0;
+}
+
+.indented-heading {
+  background-color: var(--color-secondary-gold-lighter);
+  border-bottom: 8px solid var(--color-secondary-gold-darker);
+  padding: var(--space-16) var(--space-32);
+  font-size: var(--font-size-24);
+  font-weight: 800;
+  width: max-content;
+  max-width: 100%;
+  line-height: 28.8px;
+  margin: 0;
+  margin-left: -32px;
+  margin-bottom: var(--space-24);
+}
