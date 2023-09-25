@@ -58,20 +58,30 @@ body {
 }
 
 header {
-  padding-top: var(--space-96);
-  padding-bottom: var(--space-64);
+  border-bottom: 8px solid var(--color-gray-2);
+}
+
+p {
+  font-size: var(--font-size-20);
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: var(--space-16);
+  font-weight: 400;
+}
+p:last-child {
+  margin-bottom: 0;
 }
 
 .max-width-wrapper {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0px 24px;
 }
 
 .intro-chunk {
-  max-width: 23em;
-  font-size: var(--font-size-20);
-  line-height: 30px;
-  padding: 0 var(--space-24);
+  max-width: 415px;
+  padding-top: var(--space-96);
+  padding-bottom: var(--space-64);
 }
 
 .intro-chunk strong {
@@ -83,7 +93,7 @@ header {
   margin-bottom: var(--space-48);
   font-size: var(--font-size-32);
   font-weight: 800;
-  line-height: 38.4px;
+  line-height: 1.2;
 }
 
 main {
@@ -96,17 +106,7 @@ main {
   background-color: var(--color-gray-1);
   padding: var(--space-8) var(--space-24) var(--space-24) var(--space-24);
   font-weight: 500;
-  font-size: var(--font-size-20);
-  line-height: 30px;
-}
-
-.card p {
-  margin: 0;
-  margin-bottom: var(--space-16);
-}
-
-.card p:last-of-type {
-  margin-bottom: 0;
+  margin: 0 -24px;
 }
 
 .indented-heading {
@@ -117,7 +117,7 @@ main {
   font-weight: 800;
   width: max-content;
   max-width: 100%;
-  line-height: 28.8px;
+  line-height: 1.2;
   margin: 0;
   margin-left: -32px;
   margin-bottom: var(--space-24);
